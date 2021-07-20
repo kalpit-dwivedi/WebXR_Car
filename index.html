@@ -63,7 +63,7 @@ model.position.y = -0.2;
 					
 					var animation = gltf.animations[ 1 ];
     var mixer = new THREE.AnimationMixer( model );
-    mixer.push( mixer );
+    
 
     var action = mixer.clipAction( animation );
     action.play();
