@@ -49,7 +49,7 @@
 			
 
       // Add a GLTF model to the scene
-      const modelUrl = 'char.glb';
+      const modelUrl = 'https://raw.githubusercontent.com/baronwatts/models/master/PolarBear.glb';
 
 			loader = new THREE.GLTFLoader();
 			loader.load(
@@ -61,10 +61,8 @@ model.position.y = -0.2;
 					
 					
 					scene.add(model);
-					const animations = gltf.animations;
-const mixer = new THREE.AnimationMixer( model );
-mixer.clipAction( animations[ 0 ] ).setDuration( 1 ).play();
-          console.log("Model added to scene");
+					
+
 				},
 				function (xhr) {
 		      // console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
