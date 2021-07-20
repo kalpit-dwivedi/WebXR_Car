@@ -56,7 +56,9 @@
 				modelUrl,
 				function (gltf) {
           model = gltf.scene;
-          model.position.set(-1, 0, 0.5);
+          model.position.z = 0.5;
+model.position.x = -0.5;
+					
 					
 					scene.add(model);
           console.log("Model added to scene");
