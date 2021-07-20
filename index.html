@@ -50,7 +50,7 @@
 			
 
       // Add a GLTF model to the scene
-			
+			var mixers =[];
       const modelUrl = 'char.glb';
 
 			loader = new THREE.GLTFLoader();
@@ -60,10 +60,9 @@
           model = gltf.scene;
           model.position.z =  -0.7;
 model.position.y = -0.2;
-					
 					var animation = gltf.animations[ 0 ];
       var mixer = new THREE.AnimationMixer( model );
-     
+      mixers.push( mixer );
 
       var action = mixer.clipAction( animation );
       action.play();
