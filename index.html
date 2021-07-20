@@ -18,7 +18,7 @@
 		let camera, scene, renderer;
 		let loader;
     let model;
-		var mixers = [];
+		
 
 		init();
 		animate();
@@ -50,6 +50,7 @@
 			
 
       // Add a GLTF model to the scene
+			
       const modelUrl = 'https://raw.githubusercontent.com/baronwatts/models/master/PolarBear.glb';
 
 			loader = new THREE.GLTFLoader();
@@ -62,7 +63,7 @@ model.position.y = -0.2;
 					
 					var animation = gltf.animations[ 1 ];
     var mixer = new THREE.AnimationMixer( model );
-    mixers.push( mixer );
+    mixer.push( mixer );
 
     var action = mixer.clipAction( animation );
     action.play();
